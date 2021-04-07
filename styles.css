@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --color-orange: hsl(31, 77%, 52%);
+  --color-cyan-1: hsl(184, 100%, 22%);
+  --color-cyan-2: hsl(179, 100%, 13%);
+  --color-white: hsla(0, 0%, 100%, 0.75);
+  --color-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Lexend Deca', sans-serif;
+  height: 100vh;
+  padding: 80px 25px;
+}
+
+h2 {
+  color: var(--color-gray);
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Big Shoulders Display', cursive;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.orange {
+  background: var(--color-orange);
+}
+
+.cyan {
+  background: var(--color-cyan-1);
+}
+
+.dark-cyan {
+  background: var(--color-cyan-2);
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 8px;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 45px;
+}
+
+.card img {
+  margin-bottom: 25px;
+}
+
+.card p {
+  margin-bottom: 80px;
+  line-height: 1.85;
+}
+
+.btn {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: black;
+  background: white;
+  border-radius: 50px;
+  padding: 12px 27px;
+  mix-blend-mode: screen;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  background: transparent;
+  color: white;
+}
+
+@media (max-width: 450px) {
+  body {
+    height: auto;
+  }
+  #grid {
+    grid-template-columns: 1fr;
+  }
+  .card p {
+    margin-bottom: 25px;
+  }
+}
